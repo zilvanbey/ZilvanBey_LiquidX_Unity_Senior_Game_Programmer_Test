@@ -9,6 +9,7 @@ public class AIChaseState : StateMachineBehaviour
     {
         AIFunctionsContainer ai = animator.GetComponent<AIFunctionsContainer>();
         ai.SetChaseLocomotion();
+        ai.FlashlightColorManager(Color.red);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

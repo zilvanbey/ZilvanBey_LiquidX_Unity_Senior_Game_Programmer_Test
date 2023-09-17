@@ -12,6 +12,7 @@ public class AIPatrolState : StateMachineBehaviour
 
         AIFunctionsContainer ai = animator.GetComponent<AIFunctionsContainer>();
         ai.SetPatrolLocomotion();
+        ai.FlashlightColorManager(Color.white);
 
     }
 

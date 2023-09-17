@@ -45,11 +45,10 @@ public class AIFunctionsContainer : MonoBehaviour
         angularSpeedStore = agent.angularSpeed;
         speedStore = agent.speed;
 
-        if(useViewAngleValue)
+        if (useViewAngleValue)
         {
             flashlight.spotAngle = viewAngle / 2;
         }
-        
     }
 
     private void Start()
@@ -192,7 +191,7 @@ public class AIFunctionsContainer : MonoBehaviour
     public void OnAttack() //This function can be used to add attack system to the AI
     {
         //Simple Damage example:
-        player.GetComponent<HealthManager>().Damage(1);
+        player.GetComponent<PlayerHealthManager>().Damage(1);
     }
 
     void OnFootstep() //we put this here so the foot steps animation will have a reciever
@@ -208,6 +207,10 @@ public class AIFunctionsContainer : MonoBehaviour
         selfExplosionPFX.Play();
     }
 
+    public void FlashlightColorManager(Color flashlightColor)
+    {
+        flashlight.color = flashlightColor;
+    }
     #endregion
 
 }

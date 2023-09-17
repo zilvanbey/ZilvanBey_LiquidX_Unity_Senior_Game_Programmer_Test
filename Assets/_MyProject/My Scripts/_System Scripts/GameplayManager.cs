@@ -6,9 +6,15 @@ public class GameplayManager : MonoBehaviour
 {
     public static GameplayManager gameplayManager;
 
+    public GameObject gameOverScreen;
+    public GameObject victoryScreen;
+
     private void Awake()
     {
         gameplayManager = this;
+
+        gameOverScreen.SetActive(false);
+        victoryScreen.SetActive(false);
     }
 
     //Note:
@@ -18,6 +24,11 @@ public class GameplayManager : MonoBehaviour
     {
         //Do Game Over functions here
 
-        //Call Game Over Screen here
+        gameOverScreen.SetActive(true);
+    }
+
+    public void VictoryState()
+    {
+        victoryScreen.SetActive(true);
     }
 }
