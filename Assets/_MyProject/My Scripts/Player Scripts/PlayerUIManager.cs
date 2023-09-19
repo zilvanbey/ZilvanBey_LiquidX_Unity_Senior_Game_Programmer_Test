@@ -8,6 +8,9 @@ public class PlayerUIManager : MonoBehaviour
 
     public void AdjustHealthBar(float currentHealthValue, float maxHealthValue)
     {
-        healthBar.fillAmount = currentHealthValue / maxHealthValue;
+        if (healthBar != null)
+        {
+            healthBar.fillAmount = currentHealthValue / maxHealthValue;
+        }
     }
 }

@@ -18,17 +18,19 @@ public class GameplayManager : MonoBehaviour
     }
 
     //Note:
-    //The functionality of this function is currently only for made for this Showcase
-    //Hoverer, it can be adjusted and fleshed out later on in development
+    //The functionality of this function is currently only made for this Showcase
+    //Hoverer, it can be extended by adding additional functionalities as development progresses
     public void GameOverState() 
     {
-        //Do Game Over functions here
-
         gameOverScreen.SetActive(true);
+
+        //Do Game Over functions here
     }
 
     public void VictoryState()
     {
         victoryScreen.SetActive(true);
+
+        //Do Victory functions here
     }
 }

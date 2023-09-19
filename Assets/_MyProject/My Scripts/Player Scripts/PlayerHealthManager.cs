@@ -34,7 +34,13 @@ public class PlayerHealthManager : MonoBehaviour
 
     public void Dead()
     {
+        if (GameplayManager.gameplayManager != null)
+        {
+            GameplayManager.gameplayManager.GameOverState();
+
+        }
+
         //Do Death Function Here
-        GameplayManager.gameplayManager.GameOverState();
+
     }
 }

@@ -191,7 +191,12 @@ public class AIFunctionsContainer : MonoBehaviour
     public void OnAttack() //This function can be used to add attack system to the AI
     {
         //Simple Damage example:
-        player.GetComponent<PlayerHealthManager>().Damage(1);
+        player.GetComponent<PlayerHealthManager>().Damage(1); //Damage value is currently hardcoded for showcase only
+                                                              //Can be adjusted with custom variables later
+
+        
+        //Do Attack / Damage Functions
+
     }
 
     void OnFootstep() //we put this here so the foot steps animation will have a reciever
